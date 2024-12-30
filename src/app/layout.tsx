@@ -7,7 +7,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from "@/theme";
 import ReduxProvider from "@/components/ReduxProvider/ReduxProvider";
 import Navbar from "@/components/Navbar/Navbar";
-import { ToastBar, Toaster } from "react-hot-toast";
+import {Toaster } from "react-hot-toast";
 
 
 const geistSans = Geist({

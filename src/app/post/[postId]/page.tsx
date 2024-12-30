@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Loading from "@/components/Loading/Loading"
 import PostCard from "@/components/PostCard/PostCard"
@@ -8,7 +8,7 @@ import { use, useEffect } from "react"
 
 
 
-export default  function page({params}: {params: Promise<{postId:string}>}) {
+export default  function Page({params}: {params: Promise<{postId:string}>}) {
 
     const {postId} = use( params )
 
@@ -21,7 +21,7 @@ export default  function page({params}: {params: Promise<{postId:string}>}) {
     const {postDetails} = useAppSelector((store)=> store.postsReducer)
   return (
     <>
-    {postDetails ? <PostCard postInfo={postDetails}/>  showAllComments={true}:<Loading/>}
+    {postDetails ? <PostCard postInfo={postDetails} showAllComments={true}/> :<Loading/>}
     </>
   )
 }

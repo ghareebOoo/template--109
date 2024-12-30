@@ -94,7 +94,7 @@ export default function PostCard({postInfo , showAllComments= false}: {postInfo:
       <Divider>Comments</Divider>
       <Box sx={{p:2}}>
       {postInfo.comments.length > 0 && !showAllComments &&  <CommentCard commentInfo={postInfo.comments[0]}/>}
-      {postInfo.comments.length > 1 && showAllComments && postInfo.comments.map((comment)=><CommentCard key={comment._id} commentInfo={comment}/> )}
+      {postInfo.comments.length > 1 && showAllComments && postInfo.comments.map((comment)=><CommentCard key={comment.id} commentInfo={comment}/> )}
       {!showAllComments &&  postInfo.comments.length > 1 &&   <Button variant='contained' fullWidth sx={{my:2}}>
         <Link href={`/post/${postInfo._id}`}>
         Show More Comments

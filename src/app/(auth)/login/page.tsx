@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 
 
-export default function page() {
+export default function Page() {
 
     const dispatch = useAppDispatch();
     const router =  useRouter();
@@ -26,7 +26,9 @@ export default function page() {
                         router.push("/")
                     } , 3000)
                 }
-            }).catch((error)=>{})
+            }).catch((error)=>{
+                console.log(error)
+            })
         }
     })
   return (

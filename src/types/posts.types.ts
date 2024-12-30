@@ -4,26 +4,44 @@ export type postsState = {
 }
 
 
+export interface ApiResponse {
+    message: "string";
+    paginationInfo: PaginationInfo;
+    posts: Post[];
+}
+
+
+export interface PaginationInfo{
+    currentPage: number;
+    numberOfPages: number;
+    limit: number;
+    nextPage: number | null;
+    total: number;
+}
+
 export interface Post {
     _id: string;
-    name: string;
-    slug: string;
+    body: string;
     image: string;
+    user: string;
+    createdAt: string;
+    comments: Comment[];
+    id: string;
 }
 
 export interface User {
     _id: string;
     name: string;
-    slug: string;
-    image: string;
+    photo: string;
 }
 
 
 
 export interface Comment {
-    currentPage: number;
-    numberOfPages: number;
-    limit: number;
-    nextPage: number;
+    id: string;
+    content: string;
+    commentCreator: User;
+    post: string;
+    createdAt: string;
 }
 

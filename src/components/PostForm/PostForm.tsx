@@ -55,11 +55,6 @@ export default function PostForm() {
   return (
     <>
 
-
-    
-
-
-
     
     <Box sx={{width: "75%" , mx:"auto"}}>
         <TextField fullWidth multiline minRows={7} placeholder="what's on your mind" inputRef={postContentRef}/>
@@ -75,7 +70,7 @@ export default function PostForm() {
       <VisuallyHiddenInput
         type="file" ref={postFileRef}/>
     </Button>
-        <Button onClick={createPost} variant="contained" endIcon={<SendIcon />}>Send</Button>
+        <Button onClick={createPost} variant="contained" endIcon={<SendIcon />}>Post</Button>
         </Box>
     </Box>
     </>
